@@ -25,6 +25,6 @@ jobs:
     displayName: 'Check pip version'
 
   - script: |
-      run: C:\Python\Scripts\pytest.exe test_BanktoBank.py --html=report.html
+      C:\Python\Scripts\pytest.exe test_BanktoBank.py --html=report.html
     displayName: 'Run python script'
     workingDirectory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher

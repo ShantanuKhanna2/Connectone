@@ -12,9 +12,9 @@ jobs:
   steps:
   - checkout: self
 
-  # - task: UsePythonVersion@0
-  #   inputs:
-  #     versionSpec: '3.x'  # Use the version you need
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.8'  # Use the version you need
 
   - script: |
       python --version
@@ -24,9 +24,9 @@ jobs:
       python -m pip --version
     displayName: 'Check pip version'
 
-  # - script: |
-  #     python -m pip install pytest-allure-adaptor
-  #   displayName: 'Install pytest-allure-adaptor'
+  - script: |
+      python -m pip install pytest-allure-adaptor
+    displayName: 'Install pytest-allure-adaptor'
 
   - script: |
       C:\Python\Scripts\pytest.exe test_BanktoBank.py --alluredir=./allure-results

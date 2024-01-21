@@ -12,9 +12,9 @@ jobs:
   steps:
   - checkout: self
 
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.8'  # Use the version you need
+  # - task: UsePythonVersion@0
+  #   inputs:
+  #     versionSpec: '3.8'  # Use the version you need
 
   - script: |
       python --version

@@ -1,6 +1,7 @@
 name: Trigger Repository B
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: ["Your Workflow Name in Repo B"]
     types:

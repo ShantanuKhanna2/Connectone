@@ -12,10 +12,10 @@ jobs:
   steps:
   - checkout: self
 
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.x'  # This will be used to download and install Python
-      addToPath: true
+  # - task: UsePythonVersion@0
+  #   inputs:
+  #     versionSpec: '3.x'  # This will be used to download and install Python
+  #     addToPath: true
 
   - script: |
       python --version

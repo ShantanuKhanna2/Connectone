@@ -17,7 +17,7 @@ jobs:
       versionSpec: '3.x'  # Use the version you need
 
   - script: |
-      python --version
+      python.exe --version
     displayName: 'Check Python version'
 
   - script: |

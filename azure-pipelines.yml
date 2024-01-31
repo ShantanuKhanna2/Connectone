@@ -17,17 +17,21 @@ jobs:
   #     versionSpec: '3.x'  # This will be used to download and install Python
   #     addToPath: true
 
-  - script: |
-      python --version
-    displayName: 'Check Python version'
+  # - script: |
+  #     python --version
+  #   displayName: 'Check Python version'
 
-  - script: |
-      python -m pip --version
-    displayName: 'Check pip version'
+  # - script: |
+  #     python -m pip --version
+  #   displayName: 'Check pip version'
 
   # - script: |
   #     python -m pip install pytest-allure-adaptor
   #   displayName: 'Install pytest-allure-adaptor'
+
+  - script: |
+      pip install allure-pytest
+    displayName: 'Install Allure'
 
   - script: |
       pytest.exe test_Donation.py --alluredir=./allure-reports

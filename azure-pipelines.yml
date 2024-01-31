@@ -30,12 +30,13 @@ jobs:
   #   displayName: 'Install pytest-allure-adaptor'
 
   - script: |
-      pytest.exe test_BanktoBank.py --alluredir=./allure-results
+      pytest.exe test_Donation.py --alluredir=./allure-reports
+      allure serve ./allure-reports  
     displayName: 'Run Pytest with Allure'
     workingDirectory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher
 
   - script: |
-      allure generate ./allure-results -o ./allure-report
+      allure serve ./allure-reports 
     displayName: 'Generate Allure Report'
 
   # - script: |

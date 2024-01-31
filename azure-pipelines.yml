@@ -25,12 +25,12 @@ jobs:
       python -m pip --version
     displayName: 'Check pip version'
 
-  - script: |
-      python -m pip install pytest-allure-adaptor
-    displayName: 'Install pytest-allure-adaptor'
+  # - script: |
+  #     python -m pip install pytest-allure-adaptor
+  #   displayName: 'Install pytest-allure-adaptor'
 
   - script: |
-      C:\Python\Scripts\pytest.exe test_BanktoBank.py --alluredir=./allure-results
+      pytest.exe test_BanktoBank.py --alluredir=./allure-results
     displayName: 'Run Pytest with Allure'
     workingDirectory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher
 

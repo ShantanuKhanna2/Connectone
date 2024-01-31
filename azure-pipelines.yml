@@ -14,10 +14,11 @@ jobs:
 
   - task: UsePythonVersion@0
     inputs:
-      versionSpec: '3.x'  # Use the version you need
+      versionSpec: '3.x'  # This will be used to download and install Python
+      addToPath: true
 
   - script: |
-     C:\AgentPool\_work\_tool\Python\3.8.10\x64\python.exe /V
+      python --version
     displayName: 'Check Python version'
 
   - script: |
